@@ -69,10 +69,10 @@
    </head>
    <body>
       <div id="container">
-      <fieldset name="Personal Details">
+      <fieldset name="PDetails">
       <legend>Personal Details</legend>
       <form>
-      <ul class="PDetails">
+      <ul>
          <li>
          <label for='fname' class="input">First Name</label>
          <input type="text" name="fname" required placeholder="your first name" />
@@ -83,24 +83,123 @@
          </li>
          <li>
          <label for='website' class="input">Website</label>
-         <input type="website" name="website" placeholder="url" />
+         <input type="url" name="website" placeholder="url" />
          </li>
          <li>
          <label for='password' class="input"> Password</label>
          <input type="password" name="password" placeholder="your secret code" />
          </li>
+         </ul>
+         <input type="submit" name="Submit" /> 
+      </form>
+      </fieldset>
+      <fieldset name="Gendetails" >
+      <legend>More Details</legend>
+      <form>
+         <ul>
          <li>
          <label for="PhoneNumber" class="input">Phone Number</label>
-         <input type="tel" name="PhoneNumber" placeholder="12345678" />
+         <input type="tel" pattern="[0][8][0-9]{8}" name="PhoneNumber" placeholder="12345678"  required />
          </li>
          <li>
          <label for="Passport" class="input">Passport Number</label>
          <input type="text" name="Passport" placeholder="your passport number" />
          </li>
+         <li>
+         <label for="eircode" class="input">Eircode</label>
+         <input type="text" pattern="[A-Za-z]{1}[0-9]{2}[A-Za-z0-9]{4}" name="eircode" placeholder="your eircode" required />
+         </li>
          </ul>
-         <input type="submit" name="Submit" />  
+         <input type="submit" name="Submit" /> 
       </form>
       </fieldset>
+      <fieldset name="payment" >
+      <legend>Payment Info</legend>
+      <form>
+         <ul>
+         <li>
+         <label for="creditcard" class="input">Credit Card Number</label>
+         <input type="card" minlength="16" name="creditcard" placeholder="your credit card number" />
+         </li>
+         <li>
+         <label for="age" class="input">Age</label>
+         <input type="number" name="age" placeholder="your age in years" min="16" max="105" />
+         </li>
+         <li>
+         <label for="dob" class="input">date of birth</label>
+         <input type="date" name="dob" />
+         </li>
+         </ul>
+         <input type="submit" name="Submit" /> 
+      </form>
+      </fieldset>
+      <fieldset name="checkradio" >
+      <legend>Selection</legend>
+      <form>
+         <h3>Which Meal</h3>
+         <ul>
+         <li>
+         <label for="D1">Starter</label>
+         <input type="checkbox" name="meal" value="starter" id="D1">
+         </li>
+         <li>
+         <label for="D2">Main</label>
+         <input type="checkbox" name="meal" value="main" id="D2">
+         </li>
+         <li>
+         <label for="D3">Dessert</label>
+         <input type="checkbox" name="meal" value="dessert" id="D3">
+         </li>
+         </ul>
+         <h3>Gender</h3>
+         <ul>
+         <li>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+         </li>
+         <li>
+            <label for="female">Female</label>           
+            <input type="radio" name="gender" id="female" value="female">
+         </li>
+         <li>
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other" value="other">
+         </li>
+         </ul>
+         <input type="submit" name="Submit" /> 
+      </form>
+      </fieldset>
+      
+      <fieldset name="other" >
+      <legend>Other Stuff</legend>
+      <form>
+         <label for="starsign">Select your Star Sign</label>
+         <select id="starsign" name="starsign">
+            <option>
+               Leo
+            </option>
+            <option>
+               cancer
+            </option>
+            <option>
+               Virgo
+            </option>
+         </select>
+         
+         <p><label for="music">What is your favorite music?</label>
+         <input type="text" id="music" name="music" list="musiclist" />
+         <datalist id="musiclist">
+         <label for="suggestion">or pick a fruit</label>
+         <select id="suggestion" name="altmusic">
+         <option value="rock">rock</option>
+         <option value="pop">pop</option>
+         <option value="jazz">jazz</option>
+         </select>
+         </datalist>
+         </p>
+      </form>
+      </fieldset>
+    
       </div>
    </body>
 
