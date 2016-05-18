@@ -69,25 +69,38 @@
    </head>
    <body>
       <div id="container">
-      <ul>
+      <fieldset name="Personal Details">
+      <legend>Personal Details</legend>
+      <form>
+      <ul class="PDetails">
          <li>
-         <label for='fname'>First Name</label>
-         <input type="text" name="fname" />
+         <label for='fname' class="input">First Name</label>
+         <input type="text" name="fname" required placeholder="your first name" />
          </li>
          <li>
-         <label for='email'>Email Address</label>
-         <input type="email" name="email" />
+         <label for='email' class="input">Email Address</label>
+         <input type="email" name="email" required autofocus placeholder="joeblogs@gmail.com" />
          </li>
          <li>
-         <label for='website'>Website</label>
-         <input type="website" name="website" />
+         <label for='website' class="input">Website</label>
+         <input type="website" name="website" placeholder="url" />
          </li>
          <li>
-         <label for='password'> Password</label>
-         <input type="password" name="password" />
+         <label for='password' class="input"> Password</label>
+         <input type="password" name="password" placeholder="your secret code" />
+         </li>
+         <li>
+         <label for="PhoneNumber" class="input">Phone Number</label>
+         <input type="tel" name="PhoneNumber" placeholder="12345678" />
+         </li>
+         <li>
+         <label for="Passport" class="input">Passport Number</label>
+         <input type="text" name="Passport" placeholder="your passport number" />
          </li>
          </ul>
-         <input type="submit" value="submit" />  
+         <input type="submit" name="Submit" />  
+      </form>
+      </fieldset>
       </div>
    </body>
 
